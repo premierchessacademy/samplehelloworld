@@ -1,10 +1,10 @@
 version: 0.2
 env:
   secrets-manager:
-    LOGIN: sonarcubesecrets:sonartoken
-    HOST: sonarcubesecrets:HOST
-    Organization: sonarcubesecrets:Organisation
-    Project: sonarcubesecrets:Project
+    LOGIN: sonarsecrets:sonartoken
+    HOST: sonarsecrets:HOST
+    Organization: sonarsecrets:Organisation
+    Project: sonarsecrets:Project
 
 phases:
   install:
