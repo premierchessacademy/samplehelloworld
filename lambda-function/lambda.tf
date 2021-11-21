@@ -51,6 +51,8 @@ resource "aws_lambda_function" "quizwizard_api_lambdas" {
     ignore_changes = [tags]
   }
   
+  depends_on = [aws_cloudwatch_log_group.quizwizard_api_lambda,aws_iam_policy.quizwizard_api_logstream_policy,data.aws_iam_policy_document.lambda_policies]
+
 }
 
 
@@ -66,4 +68,5 @@ resource "aws_lambda_alias" "quiz_lambda_alias" {
 #      "2" = 0.5
 #    }
 #  }
+depends_on = [aws_lambda_function.quizwizard_api_lambdas]
 }

@@ -8,6 +8,6 @@ def lambda_handler(event, context):
 
     return {
         'statusCode': 200,
-        'body': json.dumps(' This is a new Vers1ion and the version is 14')
+        'body': json.dumps(' Trial Run')
     }
 
