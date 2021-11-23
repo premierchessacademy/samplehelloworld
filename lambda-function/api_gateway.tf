@@ -129,3 +129,7 @@ resource "aws_lambda_permission" "lambda_permission1" {
 output "base_urls1" {
   value = module.api-gateway.base_urls[0]
 }
+
+output "base_urls1" {
+  value = var.stage_names1
+}
