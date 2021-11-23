@@ -29,7 +29,9 @@ phases:
          - curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=$Project > result.json
          - cat result.json
          - if [ $(jq -r '.projectStatus.status' result.json) = ERROR ] ; then echo SonarCloud Error; exit 1 ;fi               
-         - curl -o terraform.zip https://releases.hashicorp.com/terraform/1.0.11/terraform_1.0.11_linux_amd64.zip
+         #- curl -o terraform.zip https://releases.hashicorp.com/terraform/1.0.11/terraform_1.0.11_linux_amd64.zip
+         - curl -o terraform.zip https://releases.hashicorp.com/terraform/0.15.0/terraform_0.15.0_linux_amd64.zip
+
          - unzip terraform.zip
          - ls -ltr
          - ./terraform init
