@@ -1,8 +1,8 @@
  module "api-gateway" {
     #source        = "abhilashusha/api-gateway/aws"
-    source = "git@github.com:abhilashusha/terraform-aws-api-gateway.git?ref=feature/cognito-authorization"
+    #source = "git@github.com:abhilashusha/terraform-aws-api-gateway.git?ref=feature/cognito-authorization"
 
-
+    source = "git::https://github.com/abhilashusha/terraform-aws-api-gateway?ref=feature/cognito-authorization"
     #version       = "0.15.1"
 
     name        = "api-gateway"
