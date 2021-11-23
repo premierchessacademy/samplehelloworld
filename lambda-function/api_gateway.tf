@@ -130,6 +130,6 @@ output "base_urls1" {
   value = module.api-gateway.base_urls[0]
 }
 
-output "base_urls1" {
+output "stage_names" {
   value = var.stage_names1
 }
