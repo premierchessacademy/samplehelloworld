@@ -29,8 +29,8 @@ resource "aws_lambda_function" "quizwizard_api_lambdas" {
   filename = data.archive_file.quizwizard_api_lambdas[count.index].output_path
   function_name = var.lambda_functions[count.index]
   role = aws_iam_role.quizwizard_api_role.arn
-  handler = "lambda_function.lambda_handler"
-  runtime = "python3.9"
+  handler = "${var.lambda_functions[count.index]}.lambda_handler"
+  runtime = "python3.8"
   timeout = 100
   publish = true
   source_code_hash = data.archive_file.quizwizard_api_lambdas[count.index].output_base64sha256
@@ -70,3 +70,5 @@ resource "aws_lambda_alias" "quiz_lambda_alias" {
 #  }
 depends_on = [aws_lambda_function.quizwizard_api_lambdas]
 }
+
+

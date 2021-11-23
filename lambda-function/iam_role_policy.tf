@@ -4,12 +4,13 @@ resource "aws_iam_policy" "quizwizard_api_logstream_policy" {
   path = "/"
   description = "IAM policy for quizwizard API"
   policy = data.aws_iam_policy_document.lambda_policies.json
-  tags = merge(
-    var.default_tags,
-    {
-      Workspace = terraform.workspace
-    },
-  )
+#  tags = merge(
+#    var.default_tags,
+#    {
+#      Workspace = terraform.workspace
+#    },
+# )
+  
 }
 
 
