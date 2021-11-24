@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "481e0d38-8d93-420e-bfa2-aad51ff64bad",
+		"name": "PCAAPITesting",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TestResource1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function()",
+							"{",
+							"pm.response.to.have.status(200)",
+							"}",
+							")",
+							"",
+							"pm.test(\"Response looks goods\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.deep.equal(JSON.stringify({",
+							"         \"key1\": \"value1\",",
+							"         \"key2\": 100 ",
+							"         }));",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api_url}}/mytestresource1",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"mytestresource1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestResource2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function()",
+							"{",
+							"pm.response.to.have.status(200)",
+							"}",
+							")",
+							"",
+							"pm.test(\"Response looks goods\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.deep.equal(JSON.stringify({",
+							"         \"key1\": \"value1\",",
+							"         \"key2\": 200 ",
+							"         }));",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{api_url}}/mytestresource2",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"mytestresource2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
