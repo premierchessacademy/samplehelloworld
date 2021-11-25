@@ -119,7 +119,11 @@ resource "aws_lambda_permission" "lambda_permission1" {
   //source_arn = "${aws_lambda_function.dns_automation.arn}/*/POST/dns"
   source_arn = "${module.api-gateway.execution_arn}/*/${var.http_methods[count.index]}/${var.path_parts[count.index]}"
    
+   depends_on = [
+  
+    aws_lambda_function.quizwizard_api_lambdas
 
+  ]
 
 }
 
