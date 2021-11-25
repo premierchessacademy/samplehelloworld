@@ -8,6 +8,6 @@ def lambda_handler(event, context):
 
     return {
         'statusCode': 200,
-        'body': json.dumps('{"key1":"value1","key2":400}')
+        'body': json.dumps('{"key1":"value1","key2":100}')
     }
 
