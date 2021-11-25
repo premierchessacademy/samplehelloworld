@@ -28,7 +28,7 @@ resource "aws_lambda_function" "quizwizard_api_lambdas" {
   count    = length(var.lambda_functions)
   filename = data.archive_file.quizwizard_api_lambdas[count.index].output_path
   function_name = var.lambda_functions[count.index]
-  role = aws_iam_role.quizwizard_api_role.arn
+  role = aws_iam_role.lambdaroles[count.index].arn
   handler = "${var.lambda_functions[count.index]}.lambda_handler"
   runtime = "python3.8"
   timeout = 100
