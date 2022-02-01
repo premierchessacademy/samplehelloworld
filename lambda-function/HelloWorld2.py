@@ -4,6 +4,7 @@ def lambda_handler(event, context):
     print(event)
     # TODO implement
     print(" We will try to add new lines 12")
+    print("Afsal commit")
 
 
     return {

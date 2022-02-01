@@ -5,7 +5,7 @@ def lambda_handler(event, context):
     # TODO implement
     print(" We will try to add new lines 12")
     print("Sample")
-
+    
 
     return {
         'statusCode': 200,
