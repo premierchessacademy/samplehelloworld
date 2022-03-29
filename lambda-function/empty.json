@@ -125,7 +125,7 @@
 				}
 			],
 			"request": {
-				"method": "POST",
+				"method": "GET",
 				"header": [],
 				"url": {
 					"raw": "{{api_url}}/mytestresource3",
