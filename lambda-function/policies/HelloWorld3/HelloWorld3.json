@@ -1,0 +1,14 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "",
+            "Effect": "Allow",
+            "Action": [
+                "logs:PutLogEvents",
+                "logs:CreateLogStream"
+            ],
+            "Resource": "arn:aws:logs:us-east-1:236970877969:log-group:/aws/lambda/HelloWorld3:*"
+        }
+    ]
+}
